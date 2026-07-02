@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: football-portal-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: football-portal
+
+  template:
+    metadata:
+      labels:
+        app: football-portal
+
+    spec:
+      containers:
+      - name: football-portal
+
+        image: acrfootballops758eus2.azurecr.io/football-operations-portal:v1
+
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 8080
