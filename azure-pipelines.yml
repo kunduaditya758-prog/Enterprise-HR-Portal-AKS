@@ -7,7 +7,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   imageRepository: 'football-operations-portal'
-  containerRegistry: 'Azure-ServiceConnection'
+  containerRegistry: 'ACR-ServiceConnection'
   dockerfilePath: 'Dockerfile'
   tag: '$(Build.BuildId)'
 
